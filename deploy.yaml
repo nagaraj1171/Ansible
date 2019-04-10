@@ -1,7 +1,11 @@
 
 - name: Deploy a web application
-  hosts: web_server
-
-  tasks:
-    - include: tasks/deploy_db.yaml
-    - include: tasks/deploy_web.yaml
+  hosts: web_server,db_server
+  roles:
+    - python
+    - mysql_db
+    - flask_web
+  #
+  # tasks:
+  #   - include: tasks/deploy_db.yaml
+  #   - include: tasks/deploy_web.yaml

@@ -1,0 +1,9 @@
+- name: Install repo
+  yum:
+    name: 'https://centos7.iuscommunity.org/ius-release.rpm'
+    state: present
+
+- name: Install all required dependencies
+  yum:
+    name: ['python36u','python36u-pip','python36u-devel', 'MySQL-python']
+    state: present
