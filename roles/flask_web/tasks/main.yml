@@ -4,6 +4,8 @@
       name: ["flask", "flask-mysql"]
       state: present
       executable: pip3.6
+    tags:
+      - install_req
 
   - name: Copy source code
     copy:
